@@ -3,48 +3,58 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var errHandler = require('errorhandler');
+var fs = require('fs');
+var winston = require('winston');
+var config = require('./config/');
+var favicon = require('serve-favicon');
+var logger = require('express-logger');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+//var session = require('express-session');
+var router = express.Router();
 
 //создаем приложение
 var app = express();
-app.set('port', 3000);
+
+//Middleware
+app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(logger({
+    "path": __dirname + '/libs/logfile.txt'
+}));
+app.use(bodyParser());  //req.body...
+app.use(cookieParser());    //req.cookies...
+//app.use(session());
+app.use(router);    //позволяет удобно говорить какие запросы как будут обработанны
+
+app.get('/', function(req, res, next){
+    res.render('index',{
+        body: '<h1>Hello!</h1>',
+        title: 'Hello, you!'
+    });
+});
+
+//если ни один middleware не обработал запрос, то управление передаются сюда. 
+//Этот mw ищет в директоии public подходящий файл
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+//шаблонизаторы
+app.set('views', __dirname + '/templates');
+app.set("view engine", 'ejs');
 
 //вешаем http-server
-http.createServer(app).listen(app.get('port'), function(){
-    console.log("Express server listenning on port " + app.get('port'));
+http.createServer(app).listen(config.get('port'), function(){
+    //console.log("Express server listenning on port " + app.get('port'));
+    winston.log('info', 'Express server listenning on port ' + config.get('port'));
+    winston.info("launched");
 });
 
 //middleware
-app.use(function (req, res, next){
-    if (req.url === '/'){
-        res.end("Hello");
-    } else {
-        next();
-    }
-});
 
-app.use(function (req, res, next){
-    if (req.url === '/test'){
-        res.end("test");
-    } else {
-        next();
-    }
-});
-
-app.use(function (req, res, next){
-    if (req.url === '/forbidden'){
-        next(new Error("wops, denied!"));
-    } else {
-        next();
-    }
-});
-
-app.use(function(req, res){
-   res.send(404, "Page Not Found. Sorry"); 
-});
 
 //если у функции 4 аргумента, то это обработчик ошибок
 app.use(function(err, req, res, next){
-    if(app.get('env') == 'development'){
+    if(app.get('env') === 'development'){
         errHandler (err, req, res, next);
     } else {
         res.send(500);

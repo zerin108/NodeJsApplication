@@ -1,0 +1,10 @@
+
+::1 - - [Fri, 05 Feb 2016 04:48:06 GMT] "GET / HTTP/1.1" 404 13 "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
+::1 - - [Fri, 05 Feb 2016 04:48:30 GMT] "GET / HTTP/1.1" 404 13 "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
+::1 - - [Fri, 05 Feb 2016 04:48:41 GMT] "GET /test HTTP/1.1" 404 17 "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
+::1 - - [Fri, 05 Feb 2016 05:47:36 GMT] "GET /test HTTP/1.1" 404 17 "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
+::1 - - [Fri, 05 Feb 2016 06:03:07 GMT] "GET /test HTTP/1.1" 404 17 "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
+::1 - - [Fri, 05 Feb 2016 06:06:12 GMT] "GET /test HTTP/1.1" 404 17 "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
+::1 - - [Fri, 05 Feb 2016 06:06:17 GMT] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
+::1 - - [Fri, 05 Feb 2016 06:16:43 GMT] "GET / HTTP/1.1" 200 278 "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
+::1 - - [Fri, 05 Feb 2016 06:16:43 GMT] "GET /stylesheets/style.css HTTP/1.1" 200 111 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
