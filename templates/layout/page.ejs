@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%blocks.title%></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/vendor/bower_components/dist/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <header>
+            <%-blocks.header%>
+        </header>
+        <section>
+            <%-partial('../partials/topNavigation')%>
+            <h1>
+                <%=blocks.title%>
+            </h1>
+            
+            <%=body%>
+            
+            <footer>
+                <%-blocks.footer%>
+            </footer>
+        </section>
+    </body>
+</html>

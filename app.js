@@ -39,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //шаблонизаторы
+app.engine('ejs', require('ejs-mate')); //этим выражением я сказал, что я хочу чтобы нода обрабатывала файлы *.ejs этим движком, а не стандартным
 app.set('views', __dirname + '/templates');
 app.set("view engine", 'ejs');
 

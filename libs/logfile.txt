@@ -8,3 +8,7 @@
 ::1 - - [Fri, 05 Feb 2016 06:06:17 GMT] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
 ::1 - - [Fri, 05 Feb 2016 06:16:43 GMT] "GET / HTTP/1.1" 200 278 "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
 ::1 - - [Fri, 05 Feb 2016 06:16:43 GMT] "GET /stylesheets/style.css HTTP/1.1" 200 111 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
+::ffff:127.0.0.1 - - [Fri, 05 Feb 2016 07:32:14 GMT] "GET / HTTP/1.1" 200 278 "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.4.8.1000 Chrome/30.0.1599.101 Safari/537.36"
+::ffff:127.0.0.1 - - [Fri, 05 Feb 2016 07:32:21 GMT] "GET /stylesheets/style.css HTTP/1.1" 200 111 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.4.8.1000 Chrome/30.0.1599.101 Safari/537.36"
+::1 - - [Fri, 05 Feb 2016 07:39:13 GMT] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
+::1 - - [Fri, 05 Feb 2016 07:39:14 GMT] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36"
